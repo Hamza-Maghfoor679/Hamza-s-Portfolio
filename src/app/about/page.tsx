@@ -5,6 +5,7 @@ import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import Image from "next/image";
 import Skills from "@/components/Skills/Skills";
 import Education from "@/components/Education/Education";
+import Experience from "@/components/Experience/Experience";
 
 export default function page() {
   return (
@@ -106,6 +107,9 @@ export default function page() {
         <div>
           <Education />
         </div>
+      </section>
+      <section>
+        <Experience />
       </section>
     </>
   );

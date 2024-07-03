@@ -1,0 +1,24 @@
+.spinner {
+    background-image: linear-gradient(rgb(255, 164, 73) 35%,rgb(255, 42, 0));
+    width: 400px;
+    height: 400px;
+    animation: spinning82341 1.7s linear infinite;
+    text-align: center;
+    border-radius: 200px;
+    filter: blur(1px);
+    box-shadow: 0px -5px 22px 0px rgb(235, 80, 53), 0px 5px 20px 0px rgb(250, 131, 33);
+  }
+  
+  .spinner1 {
+    background-color: rgb(0, 0, 0);
+    width: 400px;
+    height: 400px;
+    border-radius: 200px;
+    filter: blur(25px);
+  }
+  
+  @keyframes spinning82341 {
+    to {
+      transform: rotate(360deg);
+    }
+  }

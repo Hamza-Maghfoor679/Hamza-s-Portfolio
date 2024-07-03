@@ -1,0 +1,13 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
+.heading {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 2rem;
+}

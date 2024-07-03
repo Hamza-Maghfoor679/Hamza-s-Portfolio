@@ -1,0 +1,103 @@
+/* LinkButton.module.css */
+
+.linkButton {
+    position: relative;
+    padding: 0 20px 0 20px;
+    border-radius: 7px;
+    border: 1px solid #8D58F7;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    height: 3rem;
+  }
+  
+  .linkButton:hover {
+    background: #8D58F7;
+    box-shadow: 0 0 30px 5px #8D58F7;
+    transition: all 0.2s ease-out;
+  }
+  .linkButton:active {
+    background: #8D58F7;
+    box-shadow: 0 0 30px 5px #8D58F7;
+    transition: all 0.2s ease-out;
+  }
+  
+  .linkButton:hover .shine {
+    animation: sh02 0.5s linear;
+  }
+  
+  .linkButton .shine {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-20deg);
+    animation: sh02 0.5s linear;
+    opacity: 0;
+  }
+  
+  @keyframes sh02 {
+    0% {
+      opacity: 0;
+      left: -10px;
+      top: -10px;
+      width: 0%;
+      height: 0%;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      left: 100%;
+      top: 100%;
+      width: 200%;
+      height: 200%;
+    }
+  }
+  
+  .linkButton:active {
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.2s ease-in;
+  }
+
+  @media (max-width: 767px) {
+   
+.linkButton {
+  position: relative;
+  padding: 0 10px 0 10px;
+  border-radius: 7px;
+  border: 1px solid rgb(254, 6, 80);;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  height: 3rem;
+}
+    .text {
+      font-size: 0.8rem;
+      width: 100%;
+    }
+  }
+  

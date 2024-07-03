@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+.blackHole {
+  width: 90vw;
+  height: 60vh;
+  border-radius: 50%;
+  background: radial-gradient(circle, black 0%, transparent 70%);
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
+}
+
+.text {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.robotContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 1rem;
+  }
+  .blackHole {
+    
+    border-radius: 50%;
+    background: radial-gradient(circle, black 0%, transparent 70%);
+    border: 10px solid rgb(255, 255, 255);
+    position: absolute;
+  }
+}

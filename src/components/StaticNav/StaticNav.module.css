@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+
+.hamza {
+  font-size: 3rem;
+  font-family: "Alex Brush", cursive;
+  font-weight: 700;
+  background: linear-gradient(to right, #8D58F7, #8D58F7, #a99097, #8D58F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 1rem;
+  position: relative;
+  padding: 5vh 10vh 0 10vh;
+}
+
+.navbarBrand {
+  display: flex;
+  align-items: center;
+}
+
+.toggleButton {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  background-color: #fff;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.navbarMenu {
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  margin-left: 2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: larger;
+  color: #ffff;
+}
+
+.navItem:hover {
+  color: #8D58F7;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .toggleButton {
+    display: flex;
+  }
+
+  .navbarMenu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+  }
+
+  .navbarMenu.active {
+    display: flex;
+  }
+
+  .navItem {
+    margin: 1rem 0;
+    text-align: center;
+  }
+}

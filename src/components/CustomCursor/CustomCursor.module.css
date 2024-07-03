@@ -1,0 +1,14 @@
+.cursor {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    background: linear-gradient(135deg, #4158D0, #C850C0, #FFCC70);
+    background-size: 200% 200%;
+    transition: transform 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  

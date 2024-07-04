@@ -1,0 +1,66 @@
+/* components/ProjectCard/ProjectCard.module.css */
+
+.card {
+    width: 210px;
+    height: 210px;
+    border-radius: 35px;
+    border: 2px solid rgb(40, 40, 40);
+    padding: 7px;
+    position: relative;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-out; /* Smooth transition for the transform property */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Scale up the card slightly */
+  }
+  
+  .p {
+    margin-top: 3vh;
+  }
+  
+  /* Media Queries */
+  
+  /* Extra small devices (phones, less than 576px) */
+  @media (max-width: 575.98px) {
+    .card {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  /* Small devices (landscape phones, less than 768px) */
+  @media (max-width: 767.98px) {
+    .card {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  
+  /* Medium devices (tablets, less than 992px) */
+  @media (max-width: 991.98px) {
+    .card {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  /* Large devices (desktops, less than 1200px) */
+  @media (max-width: 1199.98px) {
+    .card {
+      width: 210px;
+      height: 210px;
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .card {
+      width: 230px;
+      height: 230px;
+    }
+  }
+  

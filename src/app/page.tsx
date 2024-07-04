@@ -1,4 +1,6 @@
 // pages/index.tsx
+import 'devicon/devicon.min.css';
+
 
 import Navbar from '@/app/Navbar/Navbar';
 import AnimatedIntroduction from '@/components/AnimatedIntroduction/AnimatedIntroduction';

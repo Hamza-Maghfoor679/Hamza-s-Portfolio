@@ -1,8 +1,10 @@
+/* Services.module.css */
+
 .servicesContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Adjusted alignment to start */
   margin-top: 5vh;
   padding: 2vh;
 }
@@ -14,17 +16,14 @@
   font-weight: 800;
   font-family: 'Times New Roman', Times, serif;
   letter-spacing: 10px;
-  padding: 3vh;
 }
 
 .service {
-  width: 80%;
-  max-width: 600px;
+  width: 45%; /* Adjusted width for better spacing on larger screens */
   background-color: #471576;
   border-radius: 8px;
   opacity: 0;
-  margin: 2vw;
-  height: auto;
+  margin: 2vh; /* Increased margin for better separation */
   padding: 20px;
   cursor: pointer;
 }
@@ -34,10 +33,19 @@
 }
 
 .service h2 {
-  margin: 0 0 0.5rem;
+  margin: 0 0 1rem 0;
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
+}
+
+.service ul {
+  padding-left: 1.5rem; /* Added padding to the left of list items */
+}
+
+.service li {
+  list-style-type: disc; /* Changed list-style-type to disc */
+  margin-bottom: 0.5rem; /* Adjusted margin for list items */
 }
 
 .service p {
@@ -50,9 +58,8 @@
 
 @media (max-width: 1024px) {
   .service {
-    width: 90%;
-    padding: 15px;
-    margin: 1vw 3vw;
+    width: 80%; /* Adjusted width for medium screens */
+    margin: 2vh auto; /* Centered service items */
   }
 }
 
@@ -62,25 +69,30 @@
     align-items: center;
   }
 
-  .service {
-    width: 90%;
-    padding: 15px;
-    margin: 3vh 0;
-  }
-
   .title {
     font-size: 2rem;
-    margin-top: 5vh;
+    margin-top: 3vh; /* Reduced top margin for title */
+  }
+
+  .service {
+    width: 90%; /* Full width for smaller screens */
+    margin: 3vh 0; /* Adjusted vertical margin */
   }
 
   .service p {
-    font-size: 1rem;
+    font-size: 1rem; /* Reduced font size for paragraphs */
   }
 }
 
 @media (max-width: 480px) {
   .service {
-    width: 100%;
-    margin: 2vh 0;
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  .service h2 {
+    margin: 0 0 1rem 0;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
   }
 }

@@ -29,19 +29,19 @@ export default function page() {
                 From creating sleek user interfaces to developing powerful
                 backend solutions, I thrive on solving complex problems and
                 delivering high-quality, efficient solutions.{" "}
-                <span style={{ color: "#7A6EDA", fontWeight: "bold" }}>
+                <span style={{ color: "#fff", fontWeight: "bold" }}>
                   Let's team up and build something truly amazing together!
                 </span>{" "}
               </h1>
               <br />
               <h1>
                 Hey there! I'm Hamza Maghfoor, a passionate{" "}
-                <span style={{ color: "#7A6EDA", fontWeight: "bold" }}>
+                <span style={{fontWeight: "bold" }}>
                   Web and Mobile developer
                 </span>{" "}
                 who loves turning innovative ideas into dynamic, responsive
                 applications. With my expertise in the{" "}
-                <span style={{ color: "#7A6EDA", fontWeight: "bold" }}>
+                <span style={{fontWeight: "bold" }}>
                   MERN stack—MongoDB, Express.js, React, and Node.js
                 </span>
                 —I'm dedicated to crafting seamless web experiences and robust
@@ -49,7 +49,7 @@ export default function page() {
               </h1>
             </div>
           </div>
-          <div className={styles.subAbout2}>
+          {/* <div className={styles.subAbout2}>
             <h1 className={styles.textHeading2}> Why me?</h1>
             <br />
             <div className={styles.paragraph}>
@@ -95,7 +95,7 @@ export default function page() {
                 efficiency.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <section>

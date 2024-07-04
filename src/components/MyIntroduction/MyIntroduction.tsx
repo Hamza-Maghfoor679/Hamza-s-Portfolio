@@ -34,6 +34,7 @@ const MyIntroduction: React.FC = () => {
     // Initialize Typed.js
     const typed = new Typed(typedElementRef.current, {
       strings: [
+        "Full Stack Mobile/Web Developer",
         "React JS Developer",
         "React Native Developer",
         "Node Js Developer",
@@ -54,7 +55,7 @@ const MyIntroduction: React.FC = () => {
       <div className={styles.subContainer}>
         <div className={styles.nameContainer}>
           <h1 className={styles.name}>
-            My name is <span className={styles.subName}>Hamza Maghfoor</span>
+            I am <span className={styles.subName}>Hamza Maghfoor</span>
           </h1>
           <h3 className={styles.profession}>
             I am a professional{" "}
@@ -62,7 +63,7 @@ const MyIntroduction: React.FC = () => {
           </h3>
         </div>
         <div className={styles.btnContainer}>
-          <LinkButton text="Explore Projects" link="services" />
+          <LinkButton text="Explore Projects" link="projects" />
           <DownloadButton />
         </div>
       </div>

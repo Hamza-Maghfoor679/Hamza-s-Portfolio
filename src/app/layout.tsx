@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import React from "react";
 import "./globals.css";
+import 'devicon/devicon.min.css';
+
 
 const inter = Inter({ subsets: ["latin"] });
 

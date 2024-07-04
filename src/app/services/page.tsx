@@ -11,29 +11,51 @@ import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
 interface Service {
   title: string;
-  description: string;
+  description: string[];
 }
 
 const services: Service[] = [
   { 
     title: "Web Development", 
-    description: "Building responsive and high-performance web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js). I specialize in creating user-friendly interfaces with rich client-side interactions, backed by scalable and secure backend architectures." 
+    description: [
+      "Build responsive web applications",
+      "Utilize the MERN stack (MongoDB, Express.js, React.js, Node.js)",
+      "Create user-friendly interfaces",
+      "Ensure high performance and scalability",
+      "Implement secure backend architectures"
+    ]
   },
   { 
     title: "Mobile Development", 
-    description: "Creating cross-platform mobile applications using React Native for seamless user experiences on iOS and Android. I focus on developing applications that leverage native device capabilities while maintaining code efficiency and consistency across platforms." 
+    description: [
+      "Develop cross-platform mobile applications",
+      "Use React Native for iOS and Android",
+      "Leverage native device capabilities",
+      "Ensure seamless user experiences",
+      "Maintain code efficiency and consistency"
+    ]
   },
   { 
     title: "API Development", 
-    description: "Developing scalable and secure APIs with Node.js and Express, ensuring efficient communication between frontend and backend systems. I design APIs that adhere to RESTful principles, supporting data integration and interoperability for diverse application ecosystems." 
+    description: [
+      "Design and develop scalable APIs",
+      "Use Node.js and Express framework",
+      "Adhere to RESTful principles",
+      "Support data integration and interoperability",
+      "Ensure efficient communication between frontend and backend"
+    ]
   },
   { 
     title: "Database Management", 
-    description: "Designing and managing databases using MongoDB for flexible and robust data storage solutions. I optimize database performance, implement data security measures, and ensure data integrity for applications requiring efficient data handling and retrieval." 
+    description: [
+      "Design and manage MongoDB databases",
+      "Optimize database performance",
+      "Implement data security measures",
+      "Ensure data integrity and reliability",
+      "Support efficient data handling and retrieval"
+    ]
   },
 ];
-
-
 
 const Services: React.FC = () => {
   const serviceRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -51,23 +73,26 @@ const Services: React.FC = () => {
 
   return (
     <>
-    <CustomCursor />
-    <StaticNav />
+      <CustomCursor />
+      <StaticNav />
       <h1 className={styles.title}>Services I <span style={{color: "#7A6EDA"}}> Offer</span></h1>
-    <div className={styles.servicesContainer}>
-      {services.map((service, index) => (
-        <div
-          key={index}
-          className={styles.service}
-          ref={(el) => { serviceRefs.current[index] = el }}
-        >
-          <h2>{service.title}</h2>
-          <p>{service.description}</p>
-        </div>
-      ))}
-    </div>
+      <div className={styles.servicesContainer}>
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className={styles.service}
+            ref={(el) => { serviceRefs.current[index] = el }}
+          >
+            <h2>{service.title}</h2>
+            <ul className={styles.descriptionList}>
+              {service.description.map((point, idx) => (
+                <li key={idx}><span className={styles.bullet}></span>{point}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </>
-
   );
 };
 

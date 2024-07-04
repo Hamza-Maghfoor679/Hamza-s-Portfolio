@@ -18,8 +18,12 @@ const StaticNav = () => {
     <nav className={styles.navbar}>
       <div className={styles.navbarBrand}>
         <Link href="/" className={`${styles.hamza} nav-animation`}>Hamza</Link>
-       
       </div>
+      <button className={styles.toggleButton} onClick={toggleMenu}>
+        <div className={`${styles.bar} ${isOpen ? styles.bar1 : ''}`}></div>
+        <div className={`${styles.bar} ${isOpen ? styles.bar2 : ''}`}></div>
+        <div className={`${styles.bar} ${isOpen ? styles.bar3 : ''}`}></div>
+      </button>
       <div className={`${styles.navbarMenu} ${isOpen ? styles.active : ''}`}>
         <Link href="/about" className={`${styles.navItem} nav-link-animation`}>About</Link>
         <Link href="/services" className={`${styles.navItem} nav-link-animation`}>Services</Link>

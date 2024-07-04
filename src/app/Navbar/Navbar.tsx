@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 'use client'
 
 import { useState, useEffect } from 'react';
@@ -11,7 +10,7 @@ const Navbar = () => {
 
   useEffect(() => {
     gsap.fromTo('.nav-animation', { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, stagger: 0.2 });
-    gsap.fromTo('.nav-link-animation', { y: 80, opacity: 0 }, { y: 0, opacity: 2, duration: 1, stagger: 0.5 });
+    gsap.fromTo('.nav-link-animation', { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1, stagger: 0.5 });
   }, []);
 
   const toggleMenu = () => {
@@ -22,8 +21,12 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navbarBrand}>
         <Link href="/" className={`${styles.hamza} nav-animation`}>Hamza</Link>
-       
       </div>
+      <button className={styles.toggleButton} onClick={toggleMenu}>
+        <div className={`${styles.bar} ${isOpen ? styles.bar1 : ''}`}></div>
+        <div className={`${styles.bar} ${isOpen ? styles.bar2 : ''}`}></div>
+        <div className={`${styles.bar} ${isOpen ? styles.bar3 : ''}`}></div>
+      </button>
       <div className={`${styles.navbarMenu} ${isOpen ? styles.active : ''}`}>
         <Link href="/about" className={`${styles.navItem} nav-link-animation`}>About</Link>
         <Link href="/services" className={`${styles.navItem} nav-link-animation`}>Services</Link>

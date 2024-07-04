@@ -1,66 +1,38 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import React from 'react';
 import styles from './Skills.module.css';
 
 interface Skill {
   name: string;
-  level: string;
+  iconClass: string;
   className: string;
 }
 
-
-
-const platforms: Skill[] = [
-  { name: 'HTML5', level: '95%', className: styles.wordpress },
-  { name: 'CSS3', level: '95%', className: styles.prestashop },
-  { name: 'JavaScript', level: '80%', className: styles.joomla },
-  { name: 'React JS', level: '80%', className: styles.blogger },
-  { name: 'React Native', level: '90%', className: styles.tridion },
-  { name: 'Node JS', level: '70%', className: styles.tridion },
-  { name: 'Express JS', level: '70%', className: styles.tridion },
-  { name: 'MongoDb', level: '70%', className: styles.tridion },
-  { name: 'Firebase', level: '70%', className: styles.tridion },
+const skills: Skill[] = [
+  { name: 'HTML5', iconClass: 'devicon-html5-plain', className: styles.skillBox },
+  { name: 'CSS3', iconClass: 'devicon-css3-plain', className: styles.skillBox },
+  { name: 'JavaScript', iconClass: 'devicon-javascript-plain', className: styles.skillBox },
+  { name: 'React JS', iconClass: 'devicon-react-original', className: styles.skillBox },
+  { name: 'React Native', iconClass: 'devicon-react-original', className: styles.skillBox },
+  { name: 'Node JS', iconClass: 'devicon-nodejs-plain', className: styles.skillBox },
+  { name: 'Express JS', iconClass: 'devicon-express-original', className: styles.skillBox },
+  { name: 'MongoDB', iconClass: 'devicon-mongodb-plain', className: styles.skillBox },
+  { name: 'Firebase', iconClass: 'devicon-firebase-plain', className: styles.skillBox },
 ];
 
-
-
 const Skills: React.FC = () => {
-  const skillRefs = useRef<(HTMLSpanElement | null)[][]>([[], [], []]);
-
-  useEffect(() => {
-    [platforms].forEach((skillSet, colIndex) => {
-      skillSet.forEach((skill, index) => {
-        if (skillRefs.current[colIndex][index]) {
-          gsap.fromTo(
-            skillRefs.current[colIndex][index],
-            { width: '0%' },
-            { width: skill.level, duration: 1.5, ease: 'power2.out', delay: 0.5 * index }
-          );
-        }
-      });
-    });
-  }, []);
-
   return (
     <div className={styles.container}>
-      
-      <div className={styles.col}>
-        <h2 className={`${styles.plataformas} ${styles.titulo}`}>Skills</h2>
-        <ul className={styles.skill}>
-          {platforms.map((skill, index) => (
-            <li key={skill.name}>
-              <span
-                className={`${styles.greenline} ${skill.className}`}
-                ref={(el) => { skillRefs.current[1][index] = el; }}
-              ></span>
-              <em>{skill.name}</em>
-            </li>
-          ))}
-        </ul>
+      <h2 className={`${styles.plataformas} ${styles.titulo}`}>Technologies</h2>
+      <div className={styles.skillsGrid}>
+        {skills.map((skill) => (
+          <div key={skill.name} className={skill.className}>
+            <i className={`${skill.iconClass} ${styles.skillIcon}`}></i>
+            <span className={styles.skillName}>{skill.name}</span>
+          </div>
+        ))}
       </div>
-      
     </div>
   );
 };

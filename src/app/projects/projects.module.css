@@ -1,13 +1,44 @@
+/* projects.module.css */
+
 .container {
     width: 100vw;
     height: 100vh;
     display: flex;
     place-content: center;
     place-items: center;
-}
-
-.heading {
+    flex-direction: column; /* Updated to column for vertical alignment */
+  }
+  
+  .heading {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 2rem;
-}
+    margin-bottom: 3vh; /* Added margin-bottom for space below heading */
+  }
+  
+  .tabs {
+    display: flex;
+    place-content: center;
+    gap: 1rem; /* Adjusted gap between buttons */
+  }
+  
+  .projectsContainer {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    flex-direction: column; /* Updated to column for vertical alignment */
+    gap: 4vh; /* Increased vertical gap between sections */
+  }
+  
+  .projects {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    gap: 4vh; /* Increased gap between project cards */
+    flex-wrap: wrap;
+    padding: 2vh 10vh 2vh 10vh;
+  }
+
+  .activeTab {
+    color: #7269ba;
+  }

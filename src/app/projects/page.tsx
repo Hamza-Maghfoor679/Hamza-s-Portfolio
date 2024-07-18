@@ -7,23 +7,20 @@ import CustomCursor from '@/components/CustomCursor/CustomCursor';
 import ProjectCard from '@/components/ProjectCard/ProjectCard';
 
 const webProjects = [
-  { title: 'Web Project 1', backgroundImage: require('../../assets/images/atom.png').default },
-  { title: 'Web Project 2', backgroundImage: require('../../assets/images/atom.png').default },
-  { title: 'Web Project 2', backgroundImage: require('../../assets/images/atom.png').default },
-  { title: 'Web Project 2', backgroundImage: require('../../assets/images/atom.png').default },
-  { title: 'Web Project 2', backgroundImage: require('../../assets/images/atom.png').default },
-  { title: 'Web Project 2', backgroundImage: require('../../assets/images/atom.png').default },
-  { title: 'Web Project 2', backgroundImage: require('../../assets/images/atom.png').default },
-  { title: 'Web Project 2', backgroundImage: require('../../assets/images/atom.png').default },
-  { title: 'Web Project 2', backgroundImage: require('../../assets/images/atom.png').default },
-  { title: 'Web Project 2', backgroundImage: require('../../assets/images/atom.png').default },
-  // Add more web projects with background images as needed
+  { title: 'Oladoc Website', backgroundImage: require('../../assets/images/oladocLogo.jpg').default },
+  { title: 'Shippelo Website', backgroundImage: require('../../assets/images/ShippeloLogo.png').default },
 ];
 
 const mobileProjects = [
-  { title: 'Mobile Project 1', backgroundImage: require('../../assets/images/atom.png').default },
-  { title: 'Mobile Project 2', backgroundImage: require('../../assets/images/atom.png').default },
-  // Add more mobile projects with background images as needed
+  { title: 'Oladoc Mobile App', backgroundImage: require('../../assets/images/oladocLogo.jpg').default },
+  { title: 'Shippelo Customer', backgroundImage: require('../../assets/images/ShippeloLogo.png').default },
+  { title: 'Shippelo Driver', backgroundImage: require('../../assets/images/ShippeloLogo.png').default },
+  { title: 'Shippelo Warehouse', backgroundImage: require('../../assets/images/ShippeloLogo.png').default },
+  { title: 'Shippelo Admin', backgroundImage: require('../../assets/images/ShippeloLogo.png').default },
+  { title: 'RMP', backgroundImage: require('../../assets/images/Logo-RMP.png').default },
+  { title: 'RLY', backgroundImage: require('../../assets/images/Rly-logo.png').default },
+  { title: 'Blood Donation', backgroundImage: require('../../assets/images/bloodLogo.png').default },
+  { title: 'CFX Quantum(Wallet)', backgroundImage: require('../../assets/images/cfxquantum_logo.png').default },
 ];
 
 const ProjectsPage = () => {

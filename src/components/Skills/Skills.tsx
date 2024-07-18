@@ -13,6 +13,7 @@ const skills: Skill[] = [
   { name: 'HTML5', iconClass: 'devicon-html5-plain', className: styles.skillBox },
   { name: 'CSS3', iconClass: 'devicon-css3-plain', className: styles.skillBox },
   { name: 'JavaScript', iconClass: 'devicon-javascript-plain', className: styles.skillBox },
+  { name: 'TypeScript', iconClass: 'devicon-typescript-plain', className: styles.skillBox },
   { name: 'React JS', iconClass: 'devicon-react-original', className: styles.skillBox },
   { name: 'React Native', iconClass: 'devicon-react-original', className: styles.skillBox },
   { name: 'Node JS', iconClass: 'devicon-nodejs-plain', className: styles.skillBox },

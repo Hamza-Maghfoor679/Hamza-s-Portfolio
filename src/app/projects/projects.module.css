@@ -1,44 +1,90 @@
-/* projects.module.css */
-
 .container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    place-content: center;
-    place-items: center;
-    flex-direction: column; /* Updated to column for vertical alignment */
-  }
-  
-  .heading {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3vh; /* Added margin-bottom for space below heading */
-  }
-  
-  .tabs {
-    display: flex;
-    place-content: center;
-    gap: 1rem; /* Adjusted gap between buttons */
-  }
-  
-  .projectsContainer {
-    display: flex;
-    place-content: center;
-    place-items: center;
-    flex-direction: column; /* Updated to column for vertical alignment */
-    gap: 4vh; /* Increased vertical gap between sections */
-  }
-  
-  .projects {
-    display: flex;
-    place-content: center;
-    place-items: center;
-    gap: 4vh; /* Increased gap between project cards */
-    flex-wrap: wrap;
-    padding: 2vh 10vh 2vh 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 70px; /* Adjust this value if the navbar height is different */
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.tabs button.activeTab {
+  color: #7269ba;
+  border-bottom: 2px solid #7269ba;
+}
+
+.projectsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin-top: 50px; /* Adjust this value if the navbar height is different */
   }
 
-  .activeTab {
-    color: #7269ba;
+  .heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
+
+  .tabs button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+    margin-top: 40px; /* Adjust this value if the navbar height is different */
+  }
+
+  .heading {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .tabs {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tabs button {
+    font-size: 0.9rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}

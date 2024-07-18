@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ backgroundImage, title }) => 
     <>
     <div className={styles.mainClass}>
     <div className={styles.card}>
-      <Image src={backgroundImage} alt="Project Image" layout="fill" objectFit="cover" />
+      <Image src={backgroundImage} alt="Project Image" layout="fill" objectFit="contain" />
     </div>
     <div>
         <p className={styles.p}>{title}</p>

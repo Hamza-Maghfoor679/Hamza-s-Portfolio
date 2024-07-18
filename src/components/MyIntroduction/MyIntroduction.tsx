@@ -34,13 +34,14 @@ const MyIntroduction: React.FC = () => {
     // Initialize Typed.js
     const typed = new Typed(typedElementRef.current, {
       strings: [
+        "Software Developer",
         "Full Stack Mobile/Web Developer",
         "React JS Developer",
         "React Native Developer",
         "Node Js Developer",
         "Next JS Developer",
       ],
-      typeSpeed: 45,
+      typeSpeed: 90,
       loop: true,
     });
 

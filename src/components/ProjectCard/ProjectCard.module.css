@@ -12,6 +12,8 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.3s ease-out; /* Smooth transition for the transform property */
+    background-size: cover;
+    cursor: pointer;
   }
   
   .card:hover {
@@ -20,6 +22,8 @@
   
   .p {
     margin-top: 3vh;
+    cursor: pointer;
+    font-weight: 700;
   }
   
   /* Media Queries */
